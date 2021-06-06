@@ -1,0 +1,1115 @@
+/* Font Logo */
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+/* Font Heading */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+/* Font Paragraph */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {margin: 0; padding: 0; text-decoration: none; list-style: none; border: none;
+  outline: none;}
+body {font-family: Lato; padding-top: 58PX; padding-bottom: 12PX; font-size: 16PX;
+      width: 100%; background-color: #F1F2F6; box-sizing: border-box;}
+  ::-webkit-scrollbar { display: none; } ::-webkit-scrollbar-thumb
+  { background: #CCCCCC; } ::-webkit-scrollbar-thumb:hover { background: #AAAAAA; }
+p {
+  font-family: Lato;}
+a {color: inherit; text-decoration: none;}
+.Container {
+  box-sizing: border-box;
+  padding: 0PX 16PX;
+}
+/* Mulai Navbar */
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  z-index: 10;
+  padding: 0 16PX;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: #FFF;
+  min-height: 10VH;
+  font-family: Josefin Sans;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+}
+.page-active {
+  background-color: #0A5AC2;
+  color: #FFF;
+}
+.Logo {
+  font-family: Satisfy;
+  color: #1878F3;
+  font-size: 1.25EM;
+}
+.Navbar-Menu {
+  display: flex;
+  justify-content: space-around;
+}
+.Navbar-Menu .Navbar-Item {
+  box-sizing: border-box;
+  background-color: #F1F2F6;
+  padding: 12PX 12PX;
+  margin-left: 20PX;
+  font-size: 0.75EM;
+  border-radius: 0.20REM;
+  transition: .4S ease-out;
+}
+ .Navbar-Item:hover {
+   transition: .4S ease-in;
+   cursor: pointer;
+   background-color: #1878F3;
+   color: #FFF;
+}
+.Burger-Menu {
+  display: none;
+  cursor: pointer;
+}
+.Icon-Close {
+  display: none;
+}
+.Toggle .Icon-Open {
+  display: none;
+}
+.Toggle .Icon-Close {
+  display: block;
+}
+/* Akhir Navbar */
+/* Mulai Main */
+.Main {
+  display: grid;
+  grid-template-columns: 0.25FR 0.50FR 0.25FR;
+  grid-column-gap: 12PX;
+  box-sizing: border-box;
+}
+.Main.Container {
+  width: 100%;
+  margin-top: 12PX;
+}
+.img-circle{
+
+}
+.Main.Kiri {
+  height: 30VH;
+  padding: 8PX;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+}
+.Main.Kiri img {
+  margin: 0 auto;
+  padding: 4PX;
+  width: 7.5REM;
+  border-radius: 50%;
+}
+.Main.Kiri p:nth-child(2), p:nth-child(3) {
+  padding: 2PX;
+}
+.Main.Kiri p:nth-child(2) {
+  font-size: 0.90EM;
+  font-weight: bold;
+}
+.Main.Kiri p:nth-child(3) {
+  font-size: 0.75EM;
+}
+.Main.Tengah {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 12PX;
+}
+.Main.Tengah h4 {
+  font-size: 0.90EM;
+  padding: 12PX;
+  text-align: right;
+  font-weight: bold;
+}
+.Tengah-Atas {
+  padding: 8PX 4PX;
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+}
+.List-Reminder {
+  overflow-y: scroll;
+  display: grid;
+  grid-gap: 4PX;
+  padding: 0PX 4PX 0PX 0PX;
+  height: fit-content;
+}
+.Reminder {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+  padding: 20PX 16PX;
+  border-radius: 0.25REM;
+  background-color: #F1F2F6;
+  transition: .2S linear;
+}
+.Reminder:hover {
+  transition: .2S linear;
+  cursor: pointer;
+  background-color: #1878F3;
+  color: #FFF;
+}
+.Reminder .Matkul, .Dosen {
+  font-size: 0.90EM;
+}
+.Reminder .Matkul {
+  font-weight: bold;
+}
+.Tengah-Bawah {
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+  padding: 8PX;
+}
+.Slideshow-Container {
+  background-color: black;
+  height: fit-content;
+  max-width: 720PX;
+  position: relative;
+  border: 1PX solid #AAA;
+}
+.Slides {
+  display: none;
+}
+.Prev, .Next {
+  top : 50%;
+  width: auto;
+  margin-top: -22PX;
+  padding: 16PX;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 18PX;
+  user-select: none;
+  cursor: pointer;
+  position: absolute;
+  transition: .2S ease-out;
+}
+.Next {
+  right: 0;
+}
+.Prev:hover, .Next:hover {
+  transition: .2S ease-in;
+  background: RGBA(0,0,0,0.5)
+}
+.Text {
+  box-sizing: border-box;
+  font-size: 0.85EM;
+  color: #F2F2F2;
+  width: 100%;
+  background: RGBA(0,0,0,0.65);
+  padding: 12PX 12PX;
+  bottom: 0PX;
+  position: absolute;
+  text-align: left;
+}
+.Text p {
+  text-transform: capitalize;
+}
+.Text a {
+  transition: .4S linear;
+}
+.Text a:hover {
+  transition: .4S linear;
+  cursor: pointer;
+  color: #1878F3;
+}
+.TitleText {
+  color: #F2F2F2;
+  padding: 8PX 12PX;
+  position: absolute;
+  top: 0; right: 0;
+  text-shadow: 1PX 1PX 2PX #000000;
+}
+.Dot {
+  cursor: pointer;
+  height: 12PX;
+  width: 12PX;
+  margin: 8PX 2PX;
+  background: #F1F2F6;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5 linear;
+  transition: .2S linear;
+}
+.Active, .Dot:hover {
+  transition: .2S linear;
+  cursor: pointer;
+  background-color: #1878F3;
+}
+.Fade {
+  animation-name: Fade;
+  animation-duration: 2S;
+}
+@keyframes Fade {
+  from {opacity: 0;} to {opacity: 1;}
+}
+.List-Artikel {
+  display: grid;
+  grid-gap: 4PX;
+}
+.List-Artikel .Article {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: #F1F2F6;
+  padding: 6PX;
+  border-radius: 0.25REM;
+  transition: .2S ease-out;
+}
+.Article:hover {
+  transition: .2S ease-in;
+  cursor: pointer;
+  background-color: #1878F3;
+  color: #FFF;
+}
+.Article .Article-Text {
+  padding: 8PX;
+}
+.Article-Text p {
+  padding: 4PX 0PX;
+  font-size: 0.80EM;
+}
+.Article-Text a {
+  font-size: 0.80EM;
+}
+.Main.Kanan {
+  height: 50VH;
+  padding: 4PX;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+}
+.Main.Kanan h4 {
+  font-size: 0.90EM;
+  padding: 12PX;
+  text-align: center;
+  font-weight: bold;
+}
+.Main.Kanan img {
+  border-radius: 50%;
+  width: 22.5%;
+}
+.List.Teman {
+  display: grid;
+  grid-gap: 4PX;
+  overflow-y: scroll;
+  padding: 0PX 4PX 0PX 0PX;
+}
+.List.Teman .Teman {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background-color: #F1F2F6;
+  padding: 6PX;
+  border-radius: 0.25REM;
+  transition: .2S linear;
+}
+.List.Teman .Teman:hover {
+  transition: .2S linear;
+  cursor: pointer;
+  background-color: #1878F3;
+  color: #FFF;
+}
+.Teman .Label {
+  align-self: center;
+  font-size: 0.90EM;
+  padding: 0PX 14PX
+}
+/* Akhir Main */
+/* Mulai Mahasiswa */
+.Profile-Lengkap {
+  padding: 12PX 192PX;
+  grid-row-gap: 12PX;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.Box-Photo {
+  box-sizing: border-box;
+  padding: 8PX;
+  width: 100%;
+  height: 60VH;
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+  overflow-y: hidden;
+}
+.Box-Photo .Box-Overview {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  background: url("/Images/Cover-2.JPG");
+  background-position: center;
+  background-size: cover;
+}
+.Box-Overview .Profile {
+  position: absolute;
+  border: solid #AAA 4PX;
+  border-radius: 50%;
+  margin-left: 12PX;
+  z-index: 1;
+  width: 12.5%;
+  margin-top: -170px;
+}
+#imgContainer {
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+#imgArea {
+	display: inline-block;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	position: relative;
+	background-color: #eee;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+#imgArea img {
+	outline: medium none;
+	vertical-align: middle;
+	width: 100%;
+}
+#imgChange {
+	background: url("../Images/overlay.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	bottom: 0;
+	color: #FFFFFF;
+	display: block;
+	height: 30px;
+	left: 0;
+	line-height: 32px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+/* Progressbar */
+.progressBar {
+	background: none repeat scroll 0 0 #E0E0E0;
+	left: 0;
+	padding: 3px 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	display: none;
+}
+.progressBar .bar {
+	background-color: #FF6C67;
+	width: 0%;
+	height: 14px;
+}
+.progressBar .percent {
+	display: inline-block;
+	left: 0;
+	position: absolute;
+	text-align: center;
+	top: 2px;
+	width: 100%;
+}
+.Overview {
+  position: relative;
+  margin: 0REM 0.5REM 0.5REM 16REM;
+  width: 100REM;
+  padding-top: 1.5REM;
+  background-color: #FFF;
+  font-family: Josefin Sans;
+  font-size: 0.90EM;
+}
+.Overview p {
+  margin-left: 12REM;
+  transition: all .2S linear;
+  margin-left: 17px;
+}
+.Box-Photo:hover p {
+  color: #1878F3;
+  transition: all .2S linear;
+  cursor: default;
+}
+.Box-Photo p:nth-child(1) {
+  font-weight: bold;
+}
+.Box-Photo p:nth-child(2) {
+  margin-bottom: 12PX;
+}
+.Box-Biodata {
+  box-sizing: border-box;
+  padding: 8PX;
+  width: 100%;
+  height: max-content;
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+  display: flex;
+}
+.Box-Biodata .Title {
+  text-align: right;
+  font-size: 1.5EM;
+  padding: 8PX 0PX;
+  font-family: Josefin Sans;
+}
+.Box-Form {
+  width: 100%;
+}
+.Form {
+  border: solid 2PX #F1F2F6;
+  box-sizing: border-box;
+  padding: 12PX;
+  width: 100%;
+  margin-bottom: 4PX;
+}
+.Form .Title {
+  font-family: Lato;
+  font-size: 1.25EM;
+  font-weight: bold;
+}
+.Form .Biodata {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Biodata .Input-Box {
+  width: calc(100%);
+}
+.Input-Box .Details > p {
+  font-family: Lato;
+  line-height: 1;
+  padding-bottom: 0.90REM;
+  font-size: 1EM;
+}
+.Input-Box input {
+  box-sizing: border-box;
+  height: 35PX;
+  width: 100%;
+  font-family: Lato;
+  font-size: 0.9EM;
+  border: 2PX Solid #B1B7CD;
+  background-color: #F1F2F6;
+  border-radius: 0.25REM;
+  padding: 8PX;
+  transition: .2S linear;
+}
+.Input-Box > input {
+  margin-bottom: 8PX;
+}
+.Input-Box input:focus {
+  transition: .2S linear;
+  border: 2PX Solid #1878F3;
+}
+.Button-Forms {
+  width: 100%;
+  border-radius: 0.25EM;
+  font-family: Josefin Sans;
+  font-size: 1EM;
+  margin-top: 10PX;
+  height: 48PX;
+  color: #FFF;
+  background-color: #1878F3;
+  cursor: pointer;
+  transition: .4S linear;
+}
+
+.Button-Forms:hover {
+  background-color: #0A5AC2;
+  background-position: right;
+  transition: .4S linear;
+}
+/* Akhir Mahasiswa */
+/* Mulai Transkrip */
+.Transkrip.Container {
+  padding: 12PX 192PX;
+  grid-row-gap: 12PX;
+  display: grid;
+  height: 100%;
+}
+.Box-Nama {
+  cursor: default;
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: grid;
+  grid-column-gap: 6PX;
+  grid-template-columns: 0.20FR 0.80FR;
+  padding: 12PX;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+  font-size: 0.90EM;
+}
+.Sisi-Kiri {
+  background-color: #F1F2F6;
+  padding: 6PX;
+  font-weight: bold;
+  line-height: 24PX;
+}
+.Sisi-Kanan {
+  border: solid 1PX #CCC;
+  padding: 6PX;
+  line-height: 24PX;
+}
+.Box-Transkrip {
+  padding: 12PX;
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+  /* height: 75VH; */
+}
+.Box-Transkrip h4 {
+  text-align: right;
+  font-family: Josefin Sans;
+  font-size: 0.95EM;
+  font-weight: bold;
+}
+.Main-Table {
+  margin: 6PX 0PX;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85EM;
+}
+.Main-Table, th, td {
+  border: 1PX solid #CCC;
+  padding: 12PX 6PX;
+  text-align: center;
+  text-transform: capitalize;
+}
+th.Table-Row {
+  background-color: #F1F2F6;
+}
+.Center-Pagination {
+  text-align: center;
+  position: relative;
+}
+.Pagination {
+  margin-top: 8PX;
+  display: inline-block;
+}
+.Pagination a {
+  font-size: 0.80EM;
+  font-weight: bold;
+  float: left;
+  padding: 8PX 14PX;
+  border: solid 1PX #CCC;
+  margin: 0PX 2PX;
+  transition: .4S linear;
+}
+.Pagination a:hover {
+  color: #FFF;
+  background-color: #1878F3;
+  transition: .4S linear;
+}
+/* Akhir Transkrip */
+/* Mulai Informasi UKT */
+.Container-Informasi {
+  padding: 12PX 192PX;
+  display: grid;
+  grid-row-gap: 12PX;
+}
+.Total {
+  box-sizing: border-box;
+  padding: 12PX;
+  background-color: #FFF;
+  display: grid;
+  grid-template-columns: 1FR 1FR;
+  grid-column-gap: 8PX;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+}
+.Total-Kiri, .Total-Kanan {
+  border-radius: 0.25EM;
+  padding: 32PX 0PX;
+  text-align: center;
+  line-height: 24PX;
+  background-color: #F1F2F6;
+  transition: .2S linear;
+}
+.Total-Kiri:hover, .Total-Kanan:hover {
+  background-color: #1878F3;
+  color: #FFF;
+  transition: .2S linear;
+}
+.Jumlah {
+  font-family: Josefin Sans;
+  font-weight: bold;
+}
+.Detail {
+  padding: 4PX 12PX 12PX 12PX;
+  background-color: #FFF;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+}
+.Detail h4 {
+  font-family: Lato;
+  line-height: 36PX;
+  text-align: right;
+}
+.List-Riwayat {
+  overflow-y: scroll;
+  display: grid;
+  grid-gap: 6PX;
+  padding: 0PX 0PX 0PX 0PX;
+  height: max-content;
+}
+.Riwayat {
+  font-size: 0.90EM;
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.30FR 0.50FR 0.20FR;
+  padding: 6PX 12PX;
+  line-height: 28PX;
+  background-color: #F1F2F6;
+  border-radius: 0.25EM;
+  transition: .2S linear;
+}
+.Riwayat:hover {
+  background-color: #1878F3;
+  color: #FFF;
+  transition: .2S linear;
+}
+.Riwayat .Kiri {
+  text-align: left;
+}
+.Riwayat .Tengah {
+  font-weight: normal;
+  text-align: left;
+}
+.Riwayat .Kanan {
+  align-self: center;
+  text-align: right;
+}
+/* Akhir UKT */
+/* Mulai KRS */
+.Container.KRS {
+  padding: 12PX 192PX;
+  display: grid;
+  grid-row-gap: 12PX;
+}
+.KRS-Atas {
+  box-sizing: border-box;
+  background-color: #FFF;
+  display: grid;
+  grid-template-columns: 0.25FR 0.50FR 0.25FR;
+  grid-column-gap: 12PX;
+  height: 30VH;
+  align-items: center;
+  justify-content: center;
+  padding: 12PX;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+}
+.KRS-Biodata {
+  padding: 12PX;
+  font-size: 0.90EM;
+  line-height: 24PX;
+}
+.KRS-Biodata:nth-child(1) {
+  font-weight: bold;
+  background-color: #F1F2F6;
+}
+.KRS-Biodata:nth-child(2) {
+  border: solid 1PX #CCC;
+}
+.KRS-Photo {
+  margin: 0 auto;
+}
+.KRS-Photo img {
+  padding: 4PX;
+  width: 7.5REM;
+  border-radius: 50%;
+}
+.KRS-Bawah {
+  padding: 12PX;
+  box-shadow: 0PX 4PX 8PX RGBA(0, 0, 0, 0.15);
+  background-color: #FFF;
+  display: grid;
+  grid-template-columns: 1FR 1FR;
+  grid-column-gap: 0.5REM;
+  height: max-content;
+}
+.KRS-Bawah h4 {
+  text-align: center;
+  margin-bottom: 16PX;
+}
+.KRS-Kiri label {
+  margin: 16PX 0PX;
+}
+.KRS-Kiri, .KRS-Kanan {
+  font-size: 0.90EM;
+  padding: 16PX 12PX;
+  text-align: left;
+  background-color: #F1F2F6;
+  border-radius: 0.25EM;
+}
+.Checkbox-List {
+  box-sizing: border-box;
+  position: relative;
+}
+ul.Checkbox-List {
+  list-style: none;
+}
+ul.Checkbox-List li {
+  display: inline;
+}
+ul.Checkbox-List li label {
+  width: 100%;
+  display: inline-block;
+  background-color: #FFF;
+  border: 2PX solid #ADADAD;
+  color: #555;
+  border-radius: 0.25REM;
+  white-space: nowrap;
+  margin: 3px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all .2s;
+}
+ul.Checkbox-List li label {
+  padding: 8px 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+ul.Checkbox-List li label:hover {
+  border: 2PX solid #0A5AC2;
+}
+ul.Checkbox-List li label::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  padding: 2px 6px 2px 2px;
+  content: "\f067";
+  transition: transform .5s ease-in-out;
+}
+ul.Checkbox-List li input[type="checkbox"]:checked + label::before {
+  content: "\f00c";
+  transform: rotate(-360deg);
+  transition: transform .3s ease-in-out;
+}
+ul.Checkbox-List li input[type="checkbox"]:checked + label {
+  border: 2PX solid #0A5AC2;
+  background-color: #1878F3;
+  color: #fff;
+  transition: all .5s;
+}
+ul.Checkbox-List li input[type="checkbox"] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 2.6REM;
+  opacity: 0;
+}
+ul.Checkbox-List li.Item-KRS {
+  width: 100%;
+  display: inline-block;
+  background-color: #FFF;
+  border: 2PX solid #ADADAD;
+  color: #555;
+  border-radius: 0.25REM;
+  white-space: nowrap;
+  margin: 3px 0px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all .2s;
+}
+ul.Checkbox-List li.Item-KRS {
+  padding: 8px 12px;
+  box-sizing: border-box;
+}
+ul.Checkbox-List li.Item-KRS:hover {
+  border: 2PX solid #0A5AC2;
+  transition: .4S ease-in;
+  cursor: pointer;
+  background-color: #1878F3;
+  color: #FFF;
+}
+/* Breakpoint */
+@media only screen and (max-width: 1024PX) {
+  /* Tablet */
+  /* Mulai Navbar */
+  .Navbar {
+    justify-content: space-between;
+    padding: 0 20PX;
+  }
+  .Logo {
+    font-size: 1EM;
+  }
+  .Navbar-Menu .Navbar-Item {
+    padding: 10PX 10PX;
+    margin-left: 18PX;
+    font-size: 0.70EM;
+  }
+  /* Mulai Main */
+  .Main {
+    display: grid;
+    grid-template-columns: 1FR;
+  }
+  .Tengah-Atas {
+    margin-top: 12PX;
+  }
+  .Slideshow-Container {
+    max-width: 992PX;
+  }
+  .Tengah-Bawah {
+    margin-top: 12PX;
+  }
+  .Main.Kanan {
+    margin-top: 12PX;
+  }
+  .Main.Kanan img {
+    width: 10%;
+  }
+  /* Mulai Login */
+  .Container-Login h2 {
+    font-size: 2EM;
+  }
+  .Form.Login {
+    width: 40%;
+  }
+  /* Mulai Mahasiswa */
+  .Profile-Lengkap {
+    padding: 12PX 92PX;
+  }
+  .Box-Overview .Profile {
+    width: 15%;
+    margin-top: 0px;
+  }
+  .Box-Overview {
+    box-sizing: border-box;
+  }
+  .Overview p {
+    font-family: Lato;
+    margin-left: 17PX;
+  }
+  .Overview {
+    position: relative;
+    width: 100%;
+    padding-top: 24PX;
+    background-color: #FFF;
+    font-family: Josefin Sans;
+    font-size: 0.90EM;
+  }
+  /* Mulai Transkrip */
+  .Transkrip.Container {
+    padding: 12PX 12PX;
+  }
+  /* Mulai UKT */
+  .Container-Informasi {
+    font-size: 0.90EM;
+    padding: 12PX 72PX;
+    display: grid;
+    grid-row-gap: 12PX;
+  }
+  /* Mulai KRS */
+  .Container.KRS {
+    padding: 12PX 72PX;
+  }
+}
+@media only screen and (max-width: 882PX) {
+  /* Phone */
+  body {font-size: 14PX; overflow-x: hidden;}
+  .Container {
+    padding: 2PX 72PX;
+  }
+  /* Mulai Navbar */
+  .Navbar {
+    justify-content: space-between;
+    padding: 0 76PX;
+  }
+  .Logo {
+    align-self: center;
+    font-size: 0.95EM;
+  }
+  .Navbar-Menu {
+    box-sizing: border-box;
+    box-shadow: 0PX 12PX 8PX RGBA(0, 0, 0, 0.15);
+    background-color: #F1F2F6;
+    position: absolute;
+    width: 60%;
+    right: 0PX;
+    top: 10VH;
+    height: 100VH;
+    display: flex;
+    padding: 12PX;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5S linear;
+  }
+  .Navbar-Menu-Active {
+    transform: translateX(0%);
+  }
+  .Navbar-Item {
+    width: 100%;
+    padding: 24PX;
+    margin-right: 18PX;
+    margin-top: 16PX;
+    text-align: center;
+    font-size: 2EM;
+  }
+  .Burger-Menu {
+    display: block;
+  }
+  /* Mulai Main */
+  .Main {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .Tengah-Atas {
+    margin-top: 12PX;
+  }
+  .Tengah-Bawah {
+    margin-top: 12PX;
+  }
+  .Main.Kanan {
+    margin-top: 12PX;
+  }
+  .Main.Kanan img {
+    width: 10%;
+  }
+  /* Mulai Login */
+  .Container-Login h2 {
+    font-size: 2EM;
+  }
+  .Form.Login {
+    width: 50%;
+  }
+  /* Mulai Mahasiswa */
+  .Profile-Lengkap {
+    padding: 12PX 72PX;
+  }
+  .Overview p {
+    margin-left: 17PX;
+  }
+  .Overview {
+    position: relative;
+    width: 100%;
+    padding-top: 24PX;
+    background-color: #FFF;
+    font-family: Josefin Sans;
+    font-size: 0.90EM;
+  }
+  /* Mulai Transkrip */
+  .Transkrip.Container {
+    padding: 12PX 72PX;
+  }
+  .Box-Nama {
+    grid-column-gap: 6PX;
+    grid-template-columns: 0.35FR 0.75FR;
+    font-size: 0.85EM;
+  }
+  /* Mulai UKT */
+  .Container-Informasi {
+    font-size: 0.90EM;
+  }
+  .Riwayat {
+    grid-template-columns: 0.40FR 0.40FR 0.20FR;
+  }
+  /* Mulai KRS */
+  .Container.KRS {
+    padding: 12PX 72PX;
+  }
+  .KRS-Atas {
+    grid-template-columns: 0.50FR 0.50FR;
+    padding: 12PX;
+    font-size: 0.95EM;
+    height: 25VH;
+  }
+  .KRS-Photo {
+    display: none;
+  }
+  .KRS-Bawah {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 12PX;
+    height: max-content;
+  }
+  .KRS-Kiri, .KRS-Kanan {
+    min-height: 280PX;
+  }
+}
+
+/*Tambahan*/
+.image_area {
+  margin-left: 0.5REM;
+  position: absolute;
+  height: 15REM;
+  width: 15REM;
+  margin-bottom: 0.5REM;
+  border: solid 4PX white;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.preview {
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin: 10px;
+    border: 1px solid red;
+}
+
+.modal-lg{
+    max-width: 1000px !important;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  overflow: hidden;
+  display: hidden;
+  opacity: 0;
+  transition: all .5s ease-in;
+  width: 100%;
+  height: 30%;
+}
+
+.image_area:hover .overlay {
+  display: block;
+  opacity: 1;
+  transition: all .5s ease-out;
+  cursor: pointer;
+}
+
+.text {
+  font-family: Josefin Sans;
+  color: #1878F3;
+  font-size: 0.90EM;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+input.Buttons-Form {
+  width: 100%;
+  border-radius: 0.25EM;
+  font-family: Josefin Sans;
+  font-size: 1EM;
+  margin-top: 10PX;
+  height: 48PX;
+  color: #FFF;
+  background-color: #1878F3;
+  cursor: pointer;
+  transition: .4S linear;
+}
+input.Buttons-Form:hover {
+  background-color: #0A5AC2;
+  background-position: right;
+  transition: .4S linear;
+}
