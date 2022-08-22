@@ -2,7 +2,7 @@
 
 require 'koneksi.php';
 
-if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])){
+if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) ){
 
 // CHECK IF FIELDS ARE NOT EMPTY
 
